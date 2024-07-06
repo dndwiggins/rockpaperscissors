@@ -1,0 +1,62 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.score {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+}
+
+
+
+.main {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictures {
+    display: flex;
+    flex: auto;
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-color: rgb(70, 157, 233);
+    border-radius: 10px;
+}
+
+.player {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    flex-basis: 100%
+}
+
+.hands {
+    display: flex;
+    flex: auto;
+    align-self: center;
+
+
+}
+
+.text {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-self: center;
+    flex-basis: 100%
+}

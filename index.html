@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
+
+    <p class ="score"> Player: 0    Computer: 0</p>
+
     <div class = "main">
 
-        <p class ="score"> Player: 0    Computer: 0</p>
 
         <div class="player">
             <p class ="text">Pick Your Hand</p>
             <div class="hands">
-                <img src="images/rock.jpeg" alt="rock">
-                <img src="images/paper.jpeg" alt="paper">
-                <img src="images/scissors.jpeg" alt="scissors">
-
+                <img class="pictures"  id="pictures"   src ="images/rock.jpeg" alt="rock">
+                <img  class="pictures" id="pictures"  src="images/paper.jpeg" alt="paper">
+                <img class="pictures" id="pictures"  src="images/scissors.jpeg" alt="scissors">
 
             </div>
         </div>
         <div class = "computer">
-            <p>Computer</p>
-            <img src="" alt="">
+            <p class="text">Computer</p>
+            <div class="hands">
+            <img class="pictures" src="images/computer.jpeg" alt="computer">
+        </div>
         </div>
     </div>
 
