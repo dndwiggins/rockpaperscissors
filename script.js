@@ -1,16 +1,28 @@
 
 
+/* Bugs found fist issue was needed domcontent to load fully before adding event listners*/
 
+document.addEventListener('DOMContentLoaded', function () {
+    var rock = document.getElementById('rock');
+    var paper = document.getElementById('paper');
+    var scissors = document.getElementById('scissors');
 
-document.getElementById("rock").addEventListener("click", game("rock"));
+    rock.addEventListener('click', function () { game("rock"); });
+    paper.addEventListener('click', function () { game("paper"); });
+    scissors.addEventListener('click', function () { game("scissors"); });
+});
 
-document.getElementById("paper").addEventListener("click", game("paper"));
-
-document.getElementById("scissors").addEventListener("click", game("scissors"));
 
 playerScore = 0;
 
 computerScore = 0;
+
+
+
+
+
+
+
 
 
 function game(string) {
@@ -19,13 +31,13 @@ function game(string) {
 
 
     if (computer == "rock") {
-        document.getElementById("compIamge").src = "images/rock.jpeg";
+        document.getElementById("compImage").src = "images/rock.jpeg";
     }
     if (computer == "paper") {
-        document.getElementById("compIamge").src = "images/paper.jpeg";
+        document.getElementById("compImage").src = "images/paper.jpeg";
     }
     if (computer == "scissors") {
-        document.getElementById("compIamge").src = "images/scissors.jpeg";
+        document.getElementById("compImage").src = "images/scissors.jpeg";
     }
 
     let playerChoice = string;
@@ -38,7 +50,11 @@ function game(string) {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
 
+            document.getElementById("decide").innerText = "You Won!";
+
             return;
+
+
         }
 
         if (computer == "paper") {
@@ -47,12 +63,16 @@ function game(string) {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
 
+            document.getElementById("decide").innerText = "You Lost :(";
+
             return;
         }
 
         if (computer == "rock") {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
+
+            document.getElementById("decide").innerText = "Its a Tie";
 
             return;
         }
@@ -65,12 +85,16 @@ function game(string) {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
 
+            document.getElementById("decide").innerText = "You Lost :(";
+
             return;
         }
 
         if (computer == "paper") {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
+
+            document.getElementById("decide").innerText = "Its a Tie";
 
             return;
         }
@@ -80,6 +104,8 @@ function game(string) {
             playerScore++;
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
+
+            document.getElementById("decide").innerText = "You Won!";
 
             return;
         }
@@ -89,8 +115,9 @@ function game(string) {
 
         if (computer == "scissors") {
 
-
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
+
+            document.getElementById("decide").innerText = "Its a Tie";
 
             return;
         }
@@ -101,6 +128,8 @@ function game(string) {
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
 
+            document.getElementById("decide").innerText = "You Won!";
+
             return;
         }
 
@@ -109,6 +138,8 @@ function game(string) {
             computerScore++;
 
             document.getElementById("score").innerText = "Player Score: " + playerScore + " " + "Computer Score: " + computerScore;
+
+            document.getElementById("decide").innerText = "You Lost :(";
 
             return;
         }
